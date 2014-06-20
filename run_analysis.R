@@ -43,7 +43,7 @@ colnames(sub_test)<-"VNum"
 test_data<-cbind(VNum=sub_test$VNum, AName=TS_lables$AName, X_test_data)
 ###merge train data and test data
 all_data<-rbind(train_data, test_data)
-write.csv(all_data, file="all_data.csv")
+write.table(all_data, file="all_data.txt")
 ###find mean and sd row number
 col_mean<-grep("mean", colnames(all_data))
 col_std<-grep("std", colnames(all_data))
